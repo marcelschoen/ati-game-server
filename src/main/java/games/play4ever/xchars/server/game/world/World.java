@@ -1,4 +1,7 @@
-package games.play4ever.xchars.server.world;
+package games.play4ever.xchars.server.game.world;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.event.Observes;
@@ -6,6 +9,7 @@ import jakarta.inject.Inject;
 import lombok.Getter;
 
 import games.play4ever.xchars.server.game.CoreSettings;
+import lombok.Setter;
 
 public class World {
 
@@ -14,6 +18,12 @@ public class World {
 
 	@Getter
 	private char[][] worldData;
+
+	@Getter
+	private List<GameObject> gameObjects = new ArrayList<>();
+
+	@Getter @Setter
+	private GameObject owner = null;
 
 	public void init(CoreSettings coreSettings) {
 		x_width = coreSettings.getWorldXWidth();

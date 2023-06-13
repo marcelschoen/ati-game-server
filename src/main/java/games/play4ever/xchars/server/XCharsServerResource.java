@@ -2,7 +2,7 @@ package games.play4ever.xchars.server;
 
 import games.play4ever.xchars.server.game.CoreSettings;
 import games.play4ever.xchars.server.json.XCharsGameScreen;
-import games.play4ever.xchars.server.world.World;
+import games.play4ever.xchars.server.game.world.World;
 import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
