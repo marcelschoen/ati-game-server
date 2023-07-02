@@ -33,4 +33,6 @@ public abstract class GameObject {
 	@Getter @Setter
 	private int zCoordinate = 0;
 
+	@Getter
+	private GameGraphics graphics;
 }
